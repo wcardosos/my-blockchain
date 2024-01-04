@@ -15,7 +15,7 @@ blockchain = Blockchain()
 def mine():
     last_block = blockchain.last_block
     last_proof = last_block.proof
-    proof = blockchain.proof_of_work(last_proof)
+    proof = Blockchain.check_proof_of_work(last_proof)
 
     blockchain.add_transaction(
         sender="0",
